@@ -23,7 +23,7 @@ $(function () {
     //监听表单提交事件
     $('#form_reg').on('submit', function (e) {
         e.preventDefault();
-        $.post('http://ajax.frontend.itheima.net/api/reguser', {
+        $.post('/api/reguser', {
             username: $('#form_reg [name=username]').val(),
             password: $('#form_reg [name=password]').val()
         }, function (res) {
@@ -38,7 +38,7 @@ $(function () {
         e.preventDefault();
         $.ajax({
             type: 'POST',
-            url: 'http://ajax.frontend.itheima.net/api/login',
+            url: '/api/login',
             data: $(this).serialize(),
             success: function (res) {
                 // console.log(res);
